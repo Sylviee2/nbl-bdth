@@ -1,0 +1,198 @@
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+}
+.container {
+  width: 330px;
+  height: 370px;
+  background-color:rgb(251, 194, 248);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+  border-radius: 50px;
+  box-shadow: 0 20px 45px rgba(250, 154, 10, 0.25);
+}
+.cake {
+  width: 92%;
+  position: absolute;
+  bottom: 60px;
+}
+.bottom-layer,
+.top-layer,
+.middle-layer {
+  height: 80px;
+  width: 260px;
+  position: relative;
+  margin:auto;
+  background-repeat: repeat;
+  background-size: 100% 100%, 20px 120px;
+  background-position: 28px 0;
+  background-image: linear-gradient(
+      transparent 50px,
+      #e3a953 50px,
+      #e3a953 60px,
+      transparent 60px
+    ),
+    radial-gradient(circle at 30px 5px, #f592e8 30px, #ff00ff 31px);
+}
+.middle-layer {
+  transform: scale(0.85);
+  top: 72px;
+  animation: rise-1 2s forwards;
+}
+@keyframes rise-1 {
+  100% {
+    top: 7px;
+  }
+}
+.top-layer {
+  transform: scale(0.7);
+  top: 144px;
+  animation: rise-2 2s 2s forwards;
+}
+@keyframes rise-2 {
+  100% {
+    top: 26px;
+  }
+}
+.candle {
+  background: repeating-linear-gradient(
+    45deg,
+    #fd3018 0,
+    #fd3018 5px,
+    #ffa89e 5px,
+    #ffa89e 10px
+  );
+  height: 45px;
+  width: 15px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: rise-3 1s 4s forwards;
+}
+@keyframes rise-3 {
+  100% {
+    bottom: 202px;
+  }
+}
+.candle:after {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background-color: #ffee54;
+  border-radius: 0 50% 50% 50%;
+  transform: scale(0) rotate(45deg);
+  bottom: 50px;
+  left: -0.5px;
+  animation: flame 1.5s 5s forwards;
+}
+
+@keyframes flame {
+  100% {
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  background: #ffffff;
+}
+.wrapper{
+  display: flex;
+  
+}
+.wrapper .static-txt{
+  color: #ed4ed8;
+  font-size: 60px;
+  font-weight: 400;
+  opacity: 0.3;
+}
+.wrapper .dynamic-txts{
+  margin-left: 35px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color:#f79dff ;
+  font-size: 80px;
+  font-weight: 500;
+  position: relative;
+  text-shadow: #e3a953;
+  top: 10px;
+  animation: slide 12s steps(4) infinite;
+}
+
+span{
+  font-family: "The California";
+  src: url('font/The California.ttf');
+}
+
+@font-face {
+  font-family: "The California";
+  src: url('font/The California.ttf');
+}
+
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  border-left: 2px solid #000000;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+.text{
+    text-decoration: none;
+    color: rgb(251, 148, 232);
+    transform: translateY(510px);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+@font-face {
+  font-family: "Great Vibes";
+  src: url('font/great-vibes.regular.ttf');
+}

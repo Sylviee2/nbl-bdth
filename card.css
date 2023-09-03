@@ -1,0 +1,230 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color:rgb(251, 227, 227);
+    animation: stars 20s linear infinite;
+    
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.name {
+    font-size: 0.8rem;
+}
+
+
+.birthdayCard {
+    width: 100%;
+    max-width: 300px; 
+    margin: 20px;
+    
+}
+
+  
+  .birthdayCard {
+    position: relative;
+    width: 360px;
+    height:550px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+  }
+  
+  .cardFront {
+    position: relative;
+    background-color: #fff;
+    width: 360px;
+    height:550px;
+    overflow: hidden;
+    background-image: url(gambar/foto2.jpg);
+    background-size:cover;
+    transform-origin: left;
+    box-shadow: inset 0px 20px 100px rgba(0,0,0,.2), 30px 0 50px rgba(0,0,0,0.4);
+    transition: .9s;
+  }
+  
+  .happy {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin:10px;
+    border-top-left-radius: 50px; 
+    border-top-right-radius: 50px; 
+    background-image: linear-gradient(120deg, #d69ff6 0%, #fa50ec 100%);
+    transition: .1s;
+  }
+  
+  
+  .cardInside {
+    position: absolute;
+    background-color: #ffffff;
+    border: none;
+    width: 360px;
+    height:550px;
+    z-index:-1;
+    left:0;
+    top:0;
+    box-shadow: inset 0px 20px 100px rgba(0,0,0,0.2);
+  }
+
+  .cardInside a{
+    color: rgb(4, 109, 255);
+  }
+  
+  p {
+    font-family: cursive;
+    margin: 30px;
+    color: #333;
+  }
+  
+  .name {
+    position: absolute;
+    left:150px;
+    top:200px;
+    color: #333;
+    text-decoration: underline;
+  }
+  
+  .back {
+    font-family: Tahoma, sans-serif;
+    color: #333;
+    text-align: center;
+    margin:10px; 
+    text-decoration: none;
+    outline-color:#333;
+    outline-style: double;
+  }
+
+  .text {
+    font-family: Tahoma, sans-serif;
+    color: #333;
+    text-align: center;
+    margin:0; 
+    text-decoration: none;
+    outline-color:#bacbfb;
+    outline-style:double;
+    
+  }
+
+  .keluar{
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  
+  .birthdayCard:hover {
+      transform: perspective(2500px) rotate(5deg);
+      box-shadow: inset 100px 20px 100px rgba(0,0,0,.2), 0 10px 100px rgba(0,0,0,0.5);
+  }
+  
+  .birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg); 
+  }
+  
+  .birthdayCard:hover .happy {
+    visibility:hidden; 
+  }
+
+  @media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .name {
+        font-size: 0.7rem;
+    }
+
+ 
+    p {
+        margin: 40px;
+    }
+
+    .birthdayCard {
+        width: 90%;
+        max-width: none; 
+        margin: 10px;
+    }
+
+}
+
+.waveform {
+    --uib-size: 40px;
+    --uib-speed: 1s;
+    --uib-color: black;
+    --uib-line-weight: 3.5px;
+  
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 170px;
+    transform: translateY(-30px);
+    justify-content: space-between;
+    width: var(--uib-size);
+    height: calc(var(--uib-size) * 0.9);
+  }
+  
+  .waveform__bar {
+    width: var(--uib-line-weight);
+    height: 100%;
+    background-color: var(--uib-color);
+  }
+  
+  .waveform__bar:nth-child(1) {
+    animation: grow var(--uib-speed) ease-in-out
+      calc(var(--uib-speed) * -0.45) infinite;
+  }
+  
+  .waveform__bar:nth-child(2) {
+    animation: grow var(--uib-speed) ease-in-out
+      calc(var(--uib-speed) * -0.3) infinite;
+  }
+  
+  .waveform__bar:nth-child(3) {
+    animation: grow var(--uib-speed) ease-in-out
+      calc(var(--uib-speed) * -0.15) infinite;
+  }
+  
+  .waveform__bar:nth-child(4) {
+    animation: grow var(--uib-speed) ease-in-out infinite;
+  }
+  
+  @keyframes grow {
+    0%,
+    100% {
+      transform: scaleY(0.3);
+    }
+  
+    50% {
+      transform: scaleY(1);
+    }
+  }
+  
+
+
+
+
+
