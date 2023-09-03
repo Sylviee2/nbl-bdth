@@ -3,7 +3,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color:rgb(251, 227, 227);
+    background-color:rgb(251, 148, 232);
     animation: stars 20s linear infinite;
     
   }
